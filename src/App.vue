@@ -1,24 +1,33 @@
+<!--
+ * @Date: 2023-04-19 14:00:12
+ * @LastEditors: lixin
+ * @LastEditTime: 2023-04-19 17:33:14
+ * @Description: 
+-->
 <script setup lang="ts">
-  import { useTransitionBackground } from "@/hooks/useTransitionBG";
+  import { useMarsMapStore } from "~s/marsMapStore";
+  const store = useMarsMapStore();
+
   onMounted(() => {
-    useTransitionBackground();
+    store.setMap("mars3dContainer");
   });
 </script>
 
 <template>
   <div id="app">
     <Nav />
-    <RouterView />
+    <div id="mars3dContainer" class="mains mars3d-container"></div>
   </div>
 </template>
 
 <style lang="less" scoped>
   #app {
-    --nav-height: 28px;
     height: 100vh;
     width: 100vw;
-    padding-top: var(--nav-height);
-    box-sizing: border-box;
     position: relative;
+    .mains {
+      height: 100vh;
+      width: 100vw;
+    }
   }
 </style>

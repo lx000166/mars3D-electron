@@ -15,7 +15,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      "~s/*": ["src/store/*"],
+      "~s/*": ["src/stores/*"],
       "~h/*": ["src/hooks/*"]
     }
   },

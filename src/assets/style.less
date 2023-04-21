@@ -1,4 +1,8 @@
+@import "mars3d-cesium/Build/Cesium/Widgets/widgets.css";
+@import "mars3d/dist/mars3d.css";
+
 :root {
+  --nav-height: 28px;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -6,6 +10,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   background-color: #242424;
+}
+.cesium-viewer .cesium-viewer-cesiumWidgetContainer .cesium-widget canvas {
+  &:focus-visible {
+    outline: none;
+  }
 }
 /* 可拖动 */
 .drag {

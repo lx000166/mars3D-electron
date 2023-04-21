@@ -1,6 +1,6 @@
 {
-  "appId": "com.lx000-website.electron-vue3-tpm",
-  "productName": "应用模板",
+  "appId": "com.lx000-website.mars3d-electron",
+  "productName": "mars3d",
   "copyright": "Copyright © 2023 <lx>",
   "directories": {
     "output": "output/app"
@@ -11,7 +11,7 @@
   },
   "files": ["!node_modules", "output/vite/**/*", "output/electron/**/*"],
   "mac": {
-    "category": "public.app-category.electron-vue3-tpm",
+    "category": "public.app-category.mars3d-electron",
     "icon": "public/appIcon.icns",
     "target": ["dmg"]
   },

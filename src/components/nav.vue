@@ -1,3 +1,9 @@
+<!--
+ * @Date: 2023-04-19 14:00:12
+ * @LastEditors: lixin
+ * @LastEditTime: 2023-04-19 15:47:00
+ * @Description: 
+-->
 <script setup lang="ts" name="AppNav">
   const control = [
     { key: "mini", icon: "icon-2zuixiaohua-2" },
@@ -12,11 +18,7 @@
 
 <template>
   <div id="appNav" class="drag">
-    <div class="no-drag appNav_left">
-      <RouterLink to="page1">page1</RouterLink>
-      <RouterLink to="page2">page2</RouterLink>
-      <RouterLink to="page3">page3</RouterLink>
-    </div>
+    <div class="no-drag appNav_left"></div>
     <div class="no-drag appNav_right">
       <div
         v-for="item in control"
@@ -36,25 +38,32 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: aliceblue;
+    mix-blend-mode: difference;
+
     .appNav_left,
     .appNav_right {
       height: 100%;
     }
-    .appNav_left a {
-      color: rgb(2, 2, 2);
-      line-height: var(--nav-height);
-      margin-left: 10px;
-    }
+
     .appNav_right {
       .controlButton {
+        font-size: 12px;
         text-align: center;
         line-height: var(--nav-height);
         height: var(--nav-height);
         width: 36px;
         display: inline-block;
+      }
+      .controlButton:hover {
+        background-color: #81818186;
+      }
+      .controlButton:last-child:hover {
+        background-color: #fa0000cb;
       }
     }
   }

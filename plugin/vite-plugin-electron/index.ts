@@ -14,10 +14,7 @@ import { startE, closeE } from "./startOrReloadElectron";
  * @description tsup监听electron/* 文件修改,重新编译后,再次启动 {tsup.config.ts--3}
  */
 const tsupoOnSuccess = async () => startE(process);
-interface params {
-  target: "mac" | "win" | "all";
-}
-export const electronStart = ({ target }: params): Plugin => ({
+export const electronStart = (): Plugin => ({
   name: "electron-start",
   configureServer(server) {
     // 被调用的后置钩子
