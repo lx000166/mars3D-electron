@@ -1,7 +1,7 @@
 /*
  * @Date: 2023-04-17 15:36:45
  * @LastEditors: lixin
- * @LastEditTime: 2023-04-19 17:10:16
+ * @LastEditTime: 2023-04-23 11:30:07
  * @Description:
  */
 import { defineConfig } from "vite";
@@ -37,7 +37,8 @@ export default defineConfig({
     // 自动引入
     AutoImport({
       imports: ["vue", "vue-router", "pinia", "@vueuse/core"],
-      dts: "types/auto-import.d.ts"
+      dts: "types/auto-import.d.ts", // d.ts文件输出目录
+      dirs: ["./src/stores"]
     })
   ],
   build: {

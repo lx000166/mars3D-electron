@@ -1,11 +1,10 @@
 <!--
  * @Date: 2023-04-19 14:00:12
  * @LastEditors: lixin
- * @LastEditTime: 2023-04-19 17:33:14
+ * @LastEditTime: 2023-04-23 16:30:33
  * @Description: 
 -->
 <script setup lang="ts">
-  import { useMarsMapStore } from "~s/marsMapStore";
   const store = useMarsMapStore();
 
   onMounted(() => {
@@ -16,7 +15,11 @@
 <template>
   <div id="app">
     <Nav />
-    <div id="mars3dContainer" class="mains mars3d-container"></div>
+    <NavigationBar />
+    <div id="mars3dContainer" class="mars3dContainer"></div>
+    <div id="mars3dContainer" class="viewContainer">
+      <RouterView />
+    </div>
   </div>
 </template>
 
@@ -25,9 +28,20 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    .mains {
+    .mars3dContainer,
+    .viewContainer {
+      position: absolute;
+      top: 0;
+      left: 0;
       height: 100vh;
       width: 100vw;
+    }
+    .mars3dContainer {
+      z-index: 1;
+    }
+    .viewContainer {
+      z-index: 2;
+      pointer-events: none;
     }
   }
 </style>

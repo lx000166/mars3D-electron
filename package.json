@@ -8,8 +8,7 @@
     "start": "vite",
     "build:win": "vue-tsc && vite build && electron-builder -w",
     "build:mac": "vue-tsc && vite build && electron-builder -m",
-    "build:prev": "vue-tsc && vite build",
-    "preview": "electron output/electron/main.cjs"
+    "preview": "vue-tsc && vite build && electron output/electron/main.cjs"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
@@ -19,7 +18,7 @@
     "less": "^4.1.3",
     "lodash": "^4.17.21",
     "mars3d": "^3.5.3",
-    "mars3d-cesium": "^1.104.0",
+    "mars3d-cesium": "^1.104.1",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.34",
     "vue": "^3.2.47",

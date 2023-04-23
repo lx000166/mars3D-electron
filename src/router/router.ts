@@ -1,24 +1,17 @@
+/*
+ * @Date: 2023-04-19 14:00:12
+ * @LastEditors: lixin
+ * @LastEditTime: 2023-04-23 16:32:49
+ * @Description:
+ */
 import type { RouteRecordRaw } from "vue-router";
 import { createRouter, createWebHashHistory, Router } from "vue-router";
 
-interface CustomRoute {
-  meta?: {
-    /**
-     * 背景渐变
-     * {undefined} 随机
-     * {TransitionBG.RandomColorItem} 固定
-     * @type {TransitionBG.colorParams}
-     */
-    color?: TransitionBG.RandomColorItem;
-  };
-}
-type routeItem = CustomRoute & RouteRecordRaw;
-
-const routes: routeItem[] = [
+const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/page1" },
   {
     path: "/page1",
-    component: () => import("@/pages/page-1.vue")
+    component: () => import("@/pages/page1/index.vue")
   },
   {
     path: "/page2",
@@ -26,10 +19,7 @@ const routes: routeItem[] = [
   },
   {
     path: "/page3",
-    component: () => import("@/pages/page-3.vue"),
-    meta: {
-      color: { start: [187, 210, 197], end: [8, 64, 96] }
-    }
+    component: () => import("@/pages/page-3.vue")
   }
 ];
 

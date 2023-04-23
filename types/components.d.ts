@@ -12,6 +12,8 @@ declare module '@vue/runtime-core' {
     AppMenu: typeof import('./../src/components/appMenu.vue')['default']
     MarsView: typeof import('./../src/components/mars-view.vue')['default']
     Nav: typeof import('./../src/components/nav.vue')['default']
+    NavigationBar: typeof import('./../src/components/navigationBar.vue')['default']
+    PageBox: typeof import('./../src/components/pageBox.vue')['default']
     RightClickMenu: typeof import('./../src/components/rightClickMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
