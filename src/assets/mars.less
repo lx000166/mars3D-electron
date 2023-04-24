@@ -1,0 +1,40 @@
+@w: 120px;
+
+.mars3d-compass-custom {
+  opacity: 0.7;
+  transform: scale(0.6);
+  transform-origin: left bottom;
+  position: absolute;
+  user-select: none;
+  width: @w;
+  height: @w;
+}
+.mars3d-compass-custom .mars3d-compass-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: @w;
+  width: @w;
+  background: #ad841342;
+  border-radius: 50%;
+}
+.mars3d-compass-custom .mars3d-compass-inner {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: @w;
+  width: @w;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.mars3d-compass-custom .mars3d-compass-rotation-arc {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: @w;
+  width: @w;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}

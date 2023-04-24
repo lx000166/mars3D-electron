@@ -1,14 +1,15 @@
 <!--
  * @Date: 2023-04-19 14:00:12
  * @LastEditors: lixin
- * @LastEditTime: 2023-04-23 16:30:33
+ * @LastEditTime: 2023-04-24 09:02:44
  * @Description: 
 -->
 <script setup lang="ts">
-  const store = useMarsMapStore();
+  // 只有action可以直接解构,state和getter解构会丢失响应性 需要用storeToRefs包裹
+  const { setMap } = useMarsMapStore();
 
   onMounted(() => {
-    store.setMap("mars3dContainer");
+    setMap("mars3dContainer");
   });
 </script>
 

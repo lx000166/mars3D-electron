@@ -5,5 +5,11 @@
     "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", "plugin", "types", "electron/**/*.ts"]
+  "include": [
+    "vite.config.ts",
+    "plugin",
+    "electron/**/*.ts",
+    "types/electron.d.ts",
+    "types/common.d.ts"
+  ]
 }
