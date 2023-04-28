@@ -1,15 +1,3 @@
-/*
- * @Date: 2023-04-19 16:50:20
- * @LastEditors: lixin
- * @LastEditTime: 2023-04-24 11:42:44
- * @Description:
- */
-/*
- * @Date: 2023-04-19 16:50:20
- * @LastEditors: lixin
- * @LastEditTime: 2023-04-24 11:21:25
- * @Description: mars3d mapStore
- */
 import * as mars3d from "mars3d";
 import type Mars3d from "mars3d";
 
@@ -24,6 +12,10 @@ const defaultConfigUrl = `/config/config.json?time=${new Date().getTime()}`;
 export const useMarsMapStore = defineStore("MarsMap", () => {
   // * state
   const map: Ref<Mars3d.Map | null> = ref(null);
+  /** mapMounted 启动队列
+   * 各个页面map.ts中的"mapMounted"生命周期方法
+   * 如果页面加载时map实例还未生成,会将对应的mapMounted方法添加到启动队列,在map实例生成后再调用
+   */
   const mountedList: Ref<MountedFunc[]> = ref([]);
 
   // * getter

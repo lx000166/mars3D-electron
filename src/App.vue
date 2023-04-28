@@ -18,7 +18,7 @@
     <Nav />
     <NavigationBar />
     <div id="mars3dContainer" class="mars3dContainer"></div>
-    <div id="mars3dContainer" class="viewContainer">
+    <div class="viewContainer">
       <RouterView />
     </div>
   </div>
