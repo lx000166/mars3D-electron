@@ -12,7 +12,7 @@
   };
   const link = [
     { name: "城市白模", path: "/page1" },
-    { name: "飞行路线", path: "/page2" },
+    { name: "模型漫游", path: "/page2" },
     { name: "加载模型", path: "/page3" }
   ];
 </script>
